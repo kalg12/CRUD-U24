@@ -9,7 +9,8 @@
   <body>
     <h1>Lista de Pendientes</h1>
     <input type="text" name="tarea" id="tarea" />
-    <button onclick="agregarTarea()">Añadir tarea</button>
+    <button id="btnAgregar" onclick="agregarTarea()">Añadir tarea</button>
+    <input type="hidden" id="indiceTarea" value="-1" />
     <ul id="lista"></ul>
     <script src="./assets/js/main.js"></script>
   </body>
