@@ -13,12 +13,14 @@ const renderizarLista = () => {
 
     // Botón para eliminar
     const btnEliminar = document.createElement("button");
+    btnEliminar.className = "button is-small is-danger ml-2"; // Clase de Bulma
     btnEliminar.textContent = "Eliminar";
     btnEliminar.onclick = () => eliminarTarea(index);
     li.appendChild(btnEliminar);
 
     // Botón para editar
     const btnEditar = document.createElement("button");
+    btnEditar.className = "button is-small is-warning ml-2"; // Clase de Bulma
     btnEditar.textContent = "Editar";
     btnEditar.onclick = () => editarTarea(index);
     li.appendChild(btnEditar);

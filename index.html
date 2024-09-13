@@ -4,15 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUD JS - Lista de Pendientes</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
     <link rel="stylesheet" href="./assets/styles/bulma.css" />
   </head>
   <body>
-    <h1>Lista de Pendientes</h1>
-    <input type="text" name="tarea" id="tarea" />
-    <button id="btnAgregar" onclick="agregarTarea()">Añadir tarea</button>
-    <input type="hidden" id="indiceTarea" value="-1" />
-    <ul id="lista"></ul>
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">Lista de Pendientes</h1>
+
+        <!-- Formulario de entrada -->
+        <div class="field is-grouped is-grouped-centered">
+          <div class="control is-expanded">
+            <input
+              class="input is-primary"
+              type="text"
+              name="tarea"
+              id="tarea"
+              placeholder="Escribe tu tarea aquí"
+            />
+          </div>
+          <div class="control">
+            <button
+              id="btnAgregar"
+              class="button is-primary"
+              onclick="agregarTarea()"
+            >
+              Añadir tarea
+            </button>
+          </div>
+        </div>
+
+        <!-- Lista de tareas -->
+        <div class="box mt-5">
+          <ul id="lista"></ul>
+        </div>
+
+        <!-- Campo oculto para actualizar tarea -->
+        <input type="hidden" id="indiceTarea" value="-1" />
+      </div>
+    </section>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
